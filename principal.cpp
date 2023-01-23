@@ -22,13 +22,14 @@ void Principal::paintEvent(QPaintEvent *event)
     QPainter painter(this);
 
     // Establecer un pincel azul
-    painter.setPen(Qt::blue);
+    painter.setPen(Qt::darkGray);
 
     // Establecer un tipo de letra y tamaño
     painter.setFont(QFont("Arial", 30));
 
     // Dibujar un texto
-    painter.drawText(rect(), Qt::AlignCenter, "Rodrigo");
+    painter.drawText(rect(), Qt::AlignCenter, "Stefany");
+    painter.drawText(0,30, "Hola");
 
     // Crear un pincel
     QPen pincel;
@@ -48,10 +49,21 @@ void Principal::paintEvent(QPaintEvent *event)
     // Dibujar un rectangulo
     painter.drawRect(300,100,50,100);
 
+    // Dibujar
+    painter.drawLine(650,425, 400,525);
+    painter.drawEllipse(650,400,50, 50);
+    painter.drawEllipse(400,500,50, 50);
+    painter.drawLine(400,700,550,450);
+    painter.drawLine(700,700,550,450);
+    painter.drawLine(400,700,550,450);
+    painter.drawLine(400,698,700,698);
+
+
+
     // Crear un nuevo pincel
     QPen pincel2;
     pincel2.setWidth(5);
-    pincel2.setColor(Qt::darkGreen);
+    pincel2.setColor(Qt::cyan);
     pincel2.setStyle(Qt::DotLine);
 
     // Establecer nuevo pincel
